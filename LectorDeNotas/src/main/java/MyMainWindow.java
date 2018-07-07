@@ -1,5 +1,4 @@
 import org.uqbar.arena.bindings.ObservableProperty;
-import org.uqbar.arena.bindings.PropertyAdapter;
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
@@ -7,8 +6,6 @@ import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.Selector;
 import org.uqbar.arena.windows.MainWindow;
 import org.uqbar.lacar.ui.model.Action;
-import org.uqbar.lacar.ui.model.ListBuilder;
-import org.uqbar.lacar.ui.model.bindings.Binding;
 import ui.ModificarAlumnoWindow;
 
 import java.util.ArrayList;
@@ -36,6 +33,7 @@ public class MyMainWindow extends MainWindow<MyWindow> {
         new Label(mainPanel).setText("Ingrese la opcion deseada");
         Selector hola = new Selector<Action>(mainPanel);
 
+
         Action modificarAlumno = new Action() {
             @Override
             public void execute() {
@@ -45,7 +43,7 @@ public class MyMainWindow extends MainWindow<MyWindow> {
 
         new Button(mainPanel)
                 .setCaption("Aceptar")
-                .onClick(() -> new ModificarAlumnoWindow());
+                .onClick(() -> new ModificarAlumnoWindow(this).open());
 
     }
 
