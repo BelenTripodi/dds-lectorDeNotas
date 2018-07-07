@@ -1,19 +1,31 @@
-import com.sun.org.apache.bcel.internal.generic.Select;
-import org.eclipse.swt.widgets.Combo;
+import org.uqbar.arena.bindings.ObservableProperty;
+import org.uqbar.arena.bindings.PropertyAdapter;
 import org.uqbar.arena.layout.VerticalLayout;
-import org.uqbar.arena.widgets.*;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
+import org.uqbar.arena.widgets.Selector;
 import org.uqbar.arena.windows.MainWindow;
 import org.uqbar.lacar.ui.model.Action;
+import org.uqbar.lacar.ui.model.ListBuilder;
+import org.uqbar.lacar.ui.model.bindings.Binding;
+import ui.ModificarAlumnoWindow;
 
-import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class MyMainWindow extends MainWindow<Conversor> {
+public class MyMainWindow extends MainWindow<MyWindow> {
+
+    private List<String> hola = new ArrayList<>();
+
+    private List<String> iniciar() {
+        hola.add("hola");
+        hola.add("chau");
+        return hola;
+    }
 
     public MyMainWindow() {
-        super(new Conversor());
+        super(new MyWindow());
     }
 
     @Override
@@ -31,23 +43,16 @@ public class MyMainWindow extends MainWindow<Conversor> {
             }
         };
 
-        new NumericField(mainPanel).bindValueToProperty("millas");
-
         new Button(mainPanel)
-                .setCaption("Convertir a kilómetros")
-                .onClick(() -> new );
+                .setCaption("Aceptar")
+                .onClick(() -> new ModificarAlumnoWindow());
 
-        new Label(mainPanel) //
-                .setBackground(Color.ORANGE)
-                .bindValueToProperty("kilometros");
-
-        new Label(mainPanel).setText(" kilómetros");
     }
 
     //TODO FIJARME SI CUANDO NO COMPLETO UN NUMERIC FIELD ES NULL
 
     public static void main(String[] args) {
-        new ConversorWindow().startApplication();
+        new MyMainWindow().startApplication();
     }
 }
 
