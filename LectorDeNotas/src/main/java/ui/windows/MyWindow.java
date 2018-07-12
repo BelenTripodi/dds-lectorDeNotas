@@ -1,3 +1,4 @@
+package ui.windows;
 public class MyWindow {
 
     private String hola;

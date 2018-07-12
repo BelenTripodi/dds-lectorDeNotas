@@ -1,4 +1,7 @@
-import org.uqbar.arena.bindings.ObservableProperty;
+package ui.windows;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
@@ -6,32 +9,27 @@ import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.Selector;
 import org.uqbar.arena.windows.MainWindow;
 import org.uqbar.lacar.ui.model.Action;
-import ui.ModificarAlumnoWindow;
 
-import java.util.ArrayList;
-import java.util.List;
+import ui.viewModel.*;
+import ui.windows.ModificarAlumnoWindow;
+import ui.windows.VerNotasWindow;
 
-public class MyMainWindow extends MainWindow<MyWindow> {
-
-    private List<String> hola = new ArrayList<>();
-
-    private List<String> iniciar() {
-        hola.add("hola");
-        hola.add("chau");
-        return hola;
-    }
+public class MyMainWindow extends MainWindow<ViewModel> {
 
     public MyMainWindow() {
-        super(new MyWindow());
+        super(new ViewModel());
     }
 
-    @Override
+   @Override
     public void createContents(Panel mainPanel) {
-        this.setTitle("Conversor de millas a kilómetros");
+        this.setTitle("CIGA");
         mainPanel.setLayout(new VerticalLayout());
 
         new Label(mainPanel).setText("Ingrese la opcion deseada");
-        Selector hola = new Selector<Action>(mainPanel);
+    //    Selector selectorMenu = new Selector<Action>(mainPanel);
+//        selectorMenu.bindItemsToProperty("opciones");
+//        selectorMenu.bindValueToProperty("opcionSeleccionada");
+//        selectorMenu.
 
 
         Action modificarAlumno = new Action() {
@@ -42,9 +40,13 @@ public class MyMainWindow extends MainWindow<MyWindow> {
         };
 
         new Button(mainPanel)
-                .setCaption("Aceptar")
+                .setCaption("Modificar datos")
                 .onClick(() -> new ModificarAlumnoWindow(this).open());
+        
 
+        new Button(mainPanel)
+                .setCaption("Ver notas")
+                .onClick(() -> new VerNotasWindow(this).open());
     }
 
     //TODO FIJARME SI CUANDO NO COMPLETO UN NUMERIC FIELD ES NULL
