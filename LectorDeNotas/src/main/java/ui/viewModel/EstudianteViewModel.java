@@ -2,10 +2,12 @@ package ui.viewModel;
 
 
 import org.uqbar.commons.utils.Observable;
+import org.uqbar.commons.utils.Transactional;
 
 import model.Estudiante;
 import model.Repos;
 
+@Transactional
 @Observable
 public class EstudianteViewModel {
 

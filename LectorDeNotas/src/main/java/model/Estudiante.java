@@ -1,10 +1,11 @@
 package model;
 
-import org.uqbar.commons.utils.Observable;
-
 import java.util.List;
 
-@Observable
+import org.uqbar.commons.utils.TransactionalAndObservable;
+
+
+@TransactionalAndObservable
 public class Estudiante {
 
     private String nombre;

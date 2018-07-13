@@ -34,7 +34,7 @@ public class VerNotasWindow extends Dialog<ViewModel> {
         new Column<>(unaTabla)
                 .setTitle("Aprobado")
                 .setFixedSize(100)
-                .bindContentsToProperty("aprobado");
+                .bindContentsToProperty("aprobado").setTransformer(new Transformador());;
 
 
         new Column<>(unaTabla)

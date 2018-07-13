@@ -1,18 +1,17 @@
 package ui.windows;
 
+import org.uqbar.arena.aop.windows.TransactionalDialog;
 import org.uqbar.arena.layout.ColumnLayout;
-import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.TextBox;
-import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.WindowOwner;
 
 import ui.viewModel.EstudianteViewModel;
 
 
-public class ModificarAlumnoWindow extends Dialog<EstudianteViewModel> {
+public class ModificarAlumnoWindow extends TransactionalDialog<EstudianteViewModel> {
 
     public ModificarAlumnoWindow(WindowOwner owner) {
         super(owner, new EstudianteViewModel());
@@ -20,11 +19,9 @@ public class ModificarAlumnoWindow extends Dialog<EstudianteViewModel> {
 
     @Override
     protected void createFormPanel(Panel panel) {
+    	this.setTitle("Modificar Datos");
     	Panel form = new Panel(panel);
     	form.setLayout(new ColumnLayout(2));
-    	
-    	
-    	
     	
         new Label(form).setText("Nombre");
         TextBox nombre = new TextBox(form);
@@ -44,8 +41,8 @@ public class ModificarAlumnoWindow extends Dialog<EstudianteViewModel> {
                 .setWidth(80)
                 .bindValueToProperty("github");
 
-        new Button(form).setCaption("OK").onClick(this::accept);
-        new Button(form).setCaption("Cancelar").onClick(this::cancel).setAsDefault();
+        new Button(form).setCaption("Aceptar").onClick(this::accept).setAsDefault();
+        new Button(form).setCaption("Cancelar").onClick(this::cancel);
 
     }
 
