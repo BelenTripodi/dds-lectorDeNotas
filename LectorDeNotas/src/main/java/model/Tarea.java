@@ -9,7 +9,6 @@ public class Tarea {
 
     private List<Nota> notas;
     private String nombre;
-    private Boolean aprobada;
 
     public Tarea(List<Nota> notas, String nombre) {
 		this.notas = notas;
