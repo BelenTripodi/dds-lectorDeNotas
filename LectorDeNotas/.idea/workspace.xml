@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2ad9c02-46e4-40b5-8cbf-faeb85c0307d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyMainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyMainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/ModificarAlumnoWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ModificarAlumnoWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/viewModel/AlumnoViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Estudiante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/TipoAsignacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/viewModel/ViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/viewModel/ViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/windows/ModificarAlumnoWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/windows/ModificarAlumnoWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/windows/MyMainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/windows/MyMainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/windows/MyWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/windows/VerNotasWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/windows/VerNotasWindow.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,57 +23,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyMainWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MyMainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindow.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/uqbar-project/arena-core/3.6.1/arena-core-3.6.1.jar!/org/uqbar/arena/windows/MainWindow.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Window.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/uqbar-project/arena-core/3.6.1/arena-core-3.6.1.jar!/org/uqbar/arena/windows/Window.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ModificarAlumnoWindow.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ui/ModificarAlumnoWindow.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/ModificarAlumnoWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+            <state relative-caret-position="345">
+              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModificarAlumno.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ui/ModificarAlumno.java">
+      <file leaf-file-name="AlumnoViewModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ui/viewModel/AlumnoViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="180">
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1197#1198#0" expanded="true" />
+                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1288#1289#0" expanded="true" />
+                <element signature="e#1336#1337#0" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
+                <element signature="e#1410#1411#0" expanded="true" />
+                <element signature="e#1466#1467#0" expanded="true" />
+                <element signature="e#1510#1511#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyMainWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/MyMainWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,16 +105,22 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Nota.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/NotaConceptual.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Tarea.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Estudiante.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Asignacion.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/AlgoViewModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/windows/ListadoDeNotas.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/TipoAsignacion.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/MyMainWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/ModificarAlumno.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/ModificarAlumnoWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/TipoAsignacion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/windows/MyMainWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/windows/VerNotasWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/windows/MyWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/viewModel/ViewModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Estudiante.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/viewModel/AlumnoViewModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/windows/ModificarAlumnoWindow.java" />
       </list>
     </option>
   </component>
@@ -127,10 +141,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="x" value="993" />
+    <option name="y" value="27" />
+    <option name="width" value="917" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -139,7 +153,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,11 +194,30 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="LectorDeNotas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LectorDeNotas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="viewModel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LectorDeNotas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LectorDeNotas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="windows" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,6 +234,7 @@
       <recent name="ui.windows" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ui.viewModel" />
       <recent name="ui" />
       <recent name="model" />
     </key>
@@ -219,11 +252,29 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="MyMainWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyMainWindow" />
+    <configuration name="MyMainWindow" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.windows.MyMainWindow" />
       <module name="LectorDeNotas" />
       <option name="VM_PARAMETERS" value="-Djava.system.class.loader=org.uqbar.apo.APOClassLoader" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.windows.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="MyMainWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.windows.MyMainWindow" />
+      <module name="LectorDeNotas" />
+      <option name="VM_PARAMETERS" value="-Djava.system.class.loader=org.uqbar.apo.APOClassLoader" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.windows.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -269,6 +320,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MyMainWindow" />
+        <item itemvalue="Application.MyMainWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -295,11 +347,13 @@
       <workItem from="1530915850375" duration="2146000" />
       <workItem from="1530918023902" duration="5890000" />
       <workItem from="1530975287357" duration="4549000" />
+      <workItem from="1531443695315" duration="1247000" />
+      <workItem from="1531446502699" duration="3035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19244000" />
+    <option name="totallyTimeSpent" value="23504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -319,9 +373,8 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32887402" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18483675" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18705036" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32887402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -333,6 +386,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32887402" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,68 +397,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MyMainWindow.java</url>
-          <line>38</line>
-          <properties />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/ListadoDeNotas.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Asignacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/NotaNumerica.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Nota.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/NotaConceptual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Estudiante.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LectorDeNotas.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -413,13 +409,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/ListadoDeNotas.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Asignacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Asignacion.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Nota.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/NotaConceptual.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -512,53 +502,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/NotaNumerica.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Tarea.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Parcial.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/NotaConceptual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Nota.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/ListadoDeNotas.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/AlgoViewModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/TipoAsignacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Asignacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Estudiante.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Asignacion.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/uqbar-project/arena-core/3.6.1/arena-core-3.6.1.jar!/org/uqbar/arena/widgets/Panel.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -577,9 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -587,10 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -598,9 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#474#475#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,9 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#489#490#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,10 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -632,16 +562,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyMainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyMainWindow.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/uqbar-project/arena-core/3.6.1/arena-core-3.6.1.jar!/org/uqbar/arena/windows/MainWindow.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -656,16 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MyWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyWindow.java" />
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/src.zip!/java/awt/Dialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -673,23 +585,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ui/ModificarAlumno.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/ModificarAlumno.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/ModificarAlumnoWindow.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/viewModel/ModificarAlumno.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/TipoAsignacion.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Nota.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ui/ModificarAlumnoWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/NotaNumerica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/NotaConceptual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Tarea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/MyWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Estudiante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#208#209#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/VerNotasWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/viewModel/ViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/MyMainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/viewModel/AlumnoViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1336#1337#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/windows/ModificarAlumnoWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

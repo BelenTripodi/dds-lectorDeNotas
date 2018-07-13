@@ -7,13 +7,26 @@ public class Estudiante {
     private String nombre;
     private String apellido;
     private String legajo;
+    private String github;
+
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github;
+    }
+
     private List<Tarea> asignaciones;
 
-    public Estudiante(String nombre, String apellido, String legajo, List<Tarea> asignaciones) {
+    public Estudiante(){}
+
+    public Estudiante(String nombre, String apellido, String legajo, List<Tarea> asignaciones, String github) {
 
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
+        this.github = github;
         this.asignaciones = asignaciones;
     }
 
