@@ -16,4 +16,8 @@ public class NotaConceptual extends Nota {
 		return notaReal != "M";
 	}
 
+	@Override
+	public String getNotaReal() {
+		return notaReal;
+	}
 }

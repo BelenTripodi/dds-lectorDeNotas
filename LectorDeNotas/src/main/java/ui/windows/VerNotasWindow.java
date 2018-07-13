@@ -24,23 +24,23 @@ public class VerNotasWindow extends Dialog<ViewModel> {
         panel.setLayout(new VerticalLayout());
 
         Table<Tarea> unaTabla = new Table<Tarea>(panel, Tarea.class);
-
+        
         unaTabla.bindItemsToProperty("tareas");
-
-        new Column<Tarea>(unaTabla)
+        new Column<>(unaTabla)
                 .setTitle("Nombre")
-                .setFixedSize(100)
+                .setFixedSize(160)
                 .bindContentsToProperty("nombre");
 
-        new Column<Tarea>(unaTabla)
-                .setTitle("Nota actual")
-                .setFixedSize(100)
-                .bindContentsToProperty("ultimaNota");
-
-        new Column<Tarea>(unaTabla)
+        new Column<>(unaTabla)
                 .setTitle("Aprobado")
                 .setFixedSize(100)
-                .bindContentsToProperty("aprobada");
+                .bindContentsToProperty("aprobado");
+
+
+        new Column<>(unaTabla)
+                .setTitle("Ultima nota")
+                .setFixedSize(100)
+                .bindContentsToProperty("ultimaNota");
 
     }
 
@@ -50,24 +50,4 @@ public class VerNotasWindow extends Dialog<ViewModel> {
         new Button(actions).setCaption("Aceptar").onClick(this::accept).setAsDefault();
 
     }
-
-    @Override
-    protected void executeTask() {
-        super.executeTask();
-    }
-
-
 }
-
-
-/*Table<Customer> table = new Table<Celular>(mainPanel, Customer.class);
-table.bindItemsToProperty("results");
-table.bindValueToProperty("selectedCustomer");
-
-new Column<Celular>(table) //
-    .setTitle("Name")
-    .setFixedSize(250)
-    .bindContentsToProperty("fullName");
-
-
- * */

@@ -44,6 +44,7 @@ public class Estudiante {
         this.legajo = legajo;
     }
 
+
     public String getGithub() {
         return github;
     }
@@ -60,3 +61,5 @@ public class Estudiante {
         this.tareas = tareas;
     }
 }
+
+

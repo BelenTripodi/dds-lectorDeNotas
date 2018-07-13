@@ -19,8 +19,7 @@ public class ModificarAlumnoWindow extends Dialog<EstudianteViewModel> {
     protected void createFormPanel(Panel panel) {
         new Label(panel).setText("Nombre");
         TextBox nombre = new TextBox(panel);
-        nombre.setWidth(80)
-                .bindValueToProperty("estudiante.nombre");
+        nombre.setWidth(80).bindValueToProperty("estudiante.nombre");
 
         new Label(panel).setText("Apellido");
         TextBox apellido = new TextBox(panel);

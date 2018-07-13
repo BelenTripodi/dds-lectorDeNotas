@@ -15,5 +15,9 @@ public class NotaNumerica extends Nota {
 	public Boolean estaAprobada() {
 		return notaReal > 6;
 	}
-
+	
+	@Override
+	public String getNotaReal() {
+		return notaReal.toString();
+	}
 }
