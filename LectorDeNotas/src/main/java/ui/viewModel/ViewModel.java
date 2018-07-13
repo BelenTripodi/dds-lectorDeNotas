@@ -1,20 +1,29 @@
 package ui.viewModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.uqbar.commons.utils.Observable;
-import org.uqbar.lacar.ui.model.Action;
+
+import model.Repos;
+import model.Tarea;
 
 @Observable
 public class ViewModel {
 
-	//private List<Asignacion> asignaciones;
 	
-	private Action opcionSeleccionada;
-	private List<Action> opciones= new ArrayList<>();
+	private List<Tarea> tareas;
+	
 	
 	public ViewModel() {
-		super();
+		tareas= Repos.repo.todasLasTareas();
 	}
+
+	public List<Tarea> getTareas() {
+		return tareas;
+	}
+
+	public void setTareas(List<Tarea> tareas) {
+		this.tareas = tareas;
+	}
+
 }

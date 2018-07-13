@@ -3,7 +3,6 @@ package model;
 import org.uqbar.commons.utils.Observable;
 
 @Observable
-public interface Nota {
-
-	public abstract Boolean estaAprobada();
+public class Repos {
+	public static RepoTareas repo= new RepoTareas();
 }

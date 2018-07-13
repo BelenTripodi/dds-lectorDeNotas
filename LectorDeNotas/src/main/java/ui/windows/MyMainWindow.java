@@ -1,51 +1,82 @@
 package ui.windows;
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
-import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
-import org.uqbar.arena.windows.MainWindow;
+import org.uqbar.arena.windows.Dialog;
+import org.uqbar.arena.windows.SimpleWindow;
+import org.uqbar.arena.windows.WindowOwner;
 
-import ui.viewModel.ViewModel;
-
-public class MyMainWindow extends MainWindow<ViewModel> {
-
-    public MyMainWindow() {
-        super(new ViewModel());
-    }
-
-   @Override
-    public void createContents(Panel mainPanel) {
-        this.setTitle("CIGA");
-        mainPanel.setLayout(new VerticalLayout());
-
-        new Label(mainPanel).setText("Ingrese la opcion deseada");
-    //    Selector selectorMenu = new Selector<Action>(mainPanel);
-//        selectorMenu.bindItemsToProperty("opciones");
-//        selectorMenu.bindValueToProperty("opcionSeleccionada");
-//        selectorMenu.
+import ui.viewModel.NadaViewModel;
 
 
-//        Action modificarAlumno = new Action() {
-//            @Override
-//            public void execute() {
-//                //ir a ventana para modificar el alumno
-//            }
-//        };
+public class MyMainWindow extends SimpleWindow<NadaViewModel> {
 
-        new Button(mainPanel)
-                .setCaption("Modificar datos")
-                .onClick(() -> new ModificarAlumnoWindow(this).open());
-        
+	public MyMainWindow(WindowOwner parent) {
+		super(parent, new NadaViewModel());
+	}
 
-        new Button(mainPanel)
-                .setCaption("Ver notas")
-                .onClick(() -> new VerNotasWindow(this).open());
-    }
+	@Override
+	protected void addActions(Panel panelActions) {
+		panelActions.setLayout(new VerticalLayout());
+		
+		new Button(panelActions)
+		.setCaption("Modificar datos")
+		.onClick(this::modificarDatos);
+		
+		new Button(panelActions)
+		.setCaption("Ver notas")
+		.onClick(this::verNotas);
+	}
+	
+	public void verNotas() {
+		Dialog<?> dialog = new VerNotasWindow(this);
+		dialog.open();
+		dialog.onAccept(() -> {});
+	}
+	
+	public void modificarDatos() {
+		Dialog<?> dialog = new ModificarAlumnoWindow(this);
+		dialog.open();
+		dialog.onAccept(() -> {});
+	}
+	
 
-    //TODO FIJARME SI CUANDO NO COMPLETO UN NUMERIC FIELD ES NULL
+	protected void createFormPanel(Panel formPanel) {
+		this.setTitle("CIGA");
+		
+		//formPanel.set
+		
+		}
 
-    public static void main(String[] args) {
-        new MyMainWindow().startApplication();
-    }
-}
+	}
 
+
+
+
+
+
+
+//public class MyMainWindow extends MainWindow<ViewModel> {
+//	
+//    public MyMainWindow(WindowOwner owner) {
+//        super(new ViewModel());
+//    }
+//
+//   @Override
+//    public void createContents(Panel mainPanel) {
+//        this.setTitle("CIGA");
+//        mainPanel.setLayout(new VerticalLayout());
+//        
+//
+//        new Label(mainPanel).setText("Ingrese la opcion deseada");
+//
+//        new Button(mainPanel)
+//                .setCaption("Modificar datos")
+//                .onClick(() -> new ModificarAlumnoWindow(this).open());
+//        
+//
+//        new Button(mainPanel)
+//                .setCaption("Ver notas")
+//                .onClick(() -> new VerNotasWindow(this).open());
+//    }
+//}

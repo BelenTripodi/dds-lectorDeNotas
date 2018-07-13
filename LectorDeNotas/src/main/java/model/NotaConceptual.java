@@ -1,5 +1,8 @@
 package model;
 
+import org.uqbar.commons.utils.Observable;
+
+@Observable
 public class NotaConceptual implements Nota {
 
 	String notaReal;
@@ -8,8 +11,9 @@ public class NotaConceptual implements Nota {
 		this.notaReal = notaReal;
 	}
 
+	@Override
 	public Boolean estaAprobada() {
-		return notaReal == "B";
+		return notaReal != "M";
 	}
 
 }
