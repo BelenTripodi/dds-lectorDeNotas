@@ -18,26 +18,28 @@ public class ModificarAlumnoWindow extends Dialog<AlumnoViewModel> {
     @Override
     protected void createFormPanel(Panel panel) {
         new Label(panel).setText("Nombre");
-        new TextBox(panel)
-                .setWidth(80)
-                .bindValueToProperty("nombreAlumno");
+        TextBox nombre = new TextBox(panel);
+        nombre.setWidth(80)
+                .bindEnabledToProperty("nombreAlumno");
+
         new Label(panel).setText("Apellido");
-        new TextBox(panel)
-                .setWidth(80)
+        TextBox apellido = new TextBox(panel);
+        apellido.setWidth(80)
                 .bindValueToProperty("apellidoAlumno");
+
         new Label(panel).setText("Legajo");
-        new TextBox(panel)
-                .setWidth(80)
+        TextBox legajo = new TextBox(panel);
+        legajo.setWidth(80)
                 .bindValueToProperty("legajoAlumno");
         new Label(panel).setText("Usuario GitHub");
         new TextBox(panel)
                 .setWidth(80)
-                .bindValueToProperty("githubAlumno");
-
-
-        new Button(panel).setCaption("Aceptar").onClick(this::accept);
+                .bindEnabledToProperty("githubAlumno");
+        new Button(panel).setCaption("Aplicar").onClick(() -> this.getModelObject().setTodosCampos());
+        new Button(panel).setCaption("OK").onClick(this::accept);
         new Button(panel).setCaption("Cancelar").onClick(this::cancel).setAsDefault();
 
     }
+
 
 }

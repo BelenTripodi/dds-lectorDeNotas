@@ -1,6 +1,9 @@
 package model;
 
-public interface Nota {
+import org.uqbar.commons.utils.Observable;
 
-	Boolean estaAprobada();
+@Observable
+public abstract class Nota {
+
+	abstract Boolean estaAprobada();
 }

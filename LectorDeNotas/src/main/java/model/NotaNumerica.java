@@ -1,6 +1,9 @@
 package model;
 
-public class NotaNumerica implements Nota {
+import org.uqbar.commons.utils.Observable;
+
+@Observable
+public class NotaNumerica extends Nota {
 
 	Integer notaReal;
 
@@ -8,6 +11,7 @@ public class NotaNumerica implements Nota {
 		this.notaReal = notaReal;
 	}
 
+	@Override
 	public Boolean estaAprobada() {
 		return notaReal > 6;
 	}

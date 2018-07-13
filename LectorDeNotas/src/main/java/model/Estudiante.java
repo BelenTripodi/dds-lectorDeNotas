@@ -4,17 +4,17 @@ import java.util.List;
 
 public class Estudiante {
 
-    private String nombre;
-    private String apellido;
-    private String legajo;
-    private String github;
+    private static String nombre;
+    private static String apellido;
+    private static String legajo;
+    private static String github;
 
     public String getGithub() {
         return github;
     }
 
-    public void setGithub(String github) {
-        this.github = github;
+    public static void setGithub(String github) {
+        Estudiante.github = github;
     }
 
     private List<Tarea> asignaciones;
@@ -23,10 +23,10 @@ public class Estudiante {
 
     public Estudiante(String nombre, String apellido, String legajo, List<Tarea> asignaciones, String github) {
 
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.legajo = legajo;
-        this.github = github;
+        Estudiante.nombre = nombre;
+        Estudiante.apellido = apellido;
+        Estudiante.legajo = legajo;
+        Estudiante.github = github;
         this.asignaciones = asignaciones;
     }
 
@@ -42,24 +42,24 @@ public class Estudiante {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public static void setNombre(String nombre) {
+        Estudiante.nombre = nombre;
     }
 
     public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public static void setApellido(String apellido) {
+        Estudiante.apellido = apellido;
     }
 
     public String getLegajo() {
         return legajo;
     }
 
-    public void setLegajo(String legajo) {
-        this.legajo = legajo;
+    public static void setLegajo(String legajo) {
+        Estudiante.legajo = legajo;
     }
 
 //    public Boolean aproboAsignacion(Asignacion asignacion) {

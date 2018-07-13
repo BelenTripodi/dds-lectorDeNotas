@@ -4,34 +4,51 @@ import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
-import org.uqbar.arena.windows.MainWindow;
-import ui.viewModel.ViewModel;
+import org.uqbar.arena.windows.Dialog;
+import org.uqbar.arena.windows.SimpleWindow;
+import org.uqbar.arena.windows.WindowOwner;
+import ui.viewModel.NadaViewModel;
 
-public class MyMainWindow extends MainWindow<ViewModel> {
 
-    public MyMainWindow() {
-        super(new ViewModel());
-    }
+public class MyMainWindow extends SimpleWindow<NadaViewModel> {
 
-    public static void main(String[] args) {
-        new MyMainWindow().startApplication();
+    public MyMainWindow(WindowOwner parent) {
+        super(parent, new NadaViewModel());
     }
 
     @Override
-    public void createContents(Panel mainPanel) {
+    protected void addActions(Panel panelActions) {
+        panelActions.setLayout(new VerticalLayout());
         this.setTitle("CIGA");
-        mainPanel.setLayout(new VerticalLayout());
-
-        new Label(mainPanel).setText("Ingrese la opcion deseada");
-
-        new Button(mainPanel)
+        new Label(panelActions).setText("Ingrese la opcion deseada");
+        new Button(panelActions)
                 .setCaption("Modificar datos")
-                .onClick(() -> new ModificarAlumnoWindow(this).open());
+                .onClick(this::modificarDatos);
 
-
-        new Button(mainPanel)
+        new Button(panelActions)
                 .setCaption("Ver notas")
-                .onClick(() -> new VerNotasWindow(this).open());
+                .onClick(this::verNotas);
     }
+
+    public void verNotas() {
+        Dialog<?> dialog = new VerNotasWindow(this);
+        dialog.open();
+        dialog.onAccept(() -> {
+        });
+    }
+
+    public void modificarDatos() {
+        Dialog<?> dialog = new ModificarAlumnoWindow(this);
+        dialog.open();
+        dialog.onAccept(() -> {
+        });
+    }
+
+
+    protected void createFormPanel(Panel formPanel) {
+        this.setTitle("CIGA");
+
+    }
+
 }
 

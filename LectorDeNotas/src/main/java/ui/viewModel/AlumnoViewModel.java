@@ -5,19 +5,19 @@ import model.Estudiante;
 import org.uqbar.commons.utils.Observable;
 
 @Observable
-public class AlumnoViewModel extends ViewModel {
+public class AlumnoViewModel {
 
-    private String nombreAlumno;
-    private String apellidoAlumno;
-    private String legajoAlumno;
-    private String githubAlumno;
-    private Estudiante estudiante = new Estudiante();
+    private String nombreAlumno = "Belen";
+    private String apellidoAlumno = "Curi";
+    private String legajoAlumno = "123456789";
+    private String githubAlumno = "holagit";
+
 
     public AlumnoViewModel() {
-        this.nombreAlumno = this.estudiante.getNombre();
-        this.apellidoAlumno = this.estudiante.getApellido();
-        this.legajoAlumno = this.estudiante.getLegajo();
-        this.githubAlumno = this.estudiante.getGithub();
+        Estudiante.setNombre(nombreAlumno);
+        Estudiante.setApellido(apellidoAlumno);
+        Estudiante.setLegajo(legajoAlumno);
+        Estudiante.setGithub(githubAlumno);
 
     }
 
@@ -53,11 +53,8 @@ public class AlumnoViewModel extends ViewModel {
         this.githubAlumno = githubAlumno;
     }
 
-    public Estudiante getEstudiante() {
-        return estudiante;
-    }
-
-    public void setEstudiante(Estudiante estudiante) {
-        this.estudiante = estudiante;
+    public void setTodosCampos() {
+        this.setNombreAlumno(nombreAlumno);
+        Estudiante.setNombre(nombreAlumno);
     }
 }
