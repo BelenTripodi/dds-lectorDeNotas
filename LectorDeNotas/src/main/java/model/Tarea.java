@@ -10,6 +10,15 @@ public class Tarea {
     private List<Nota> notas;
     private Nota ultimaNota;
     private String nombre;
+    private Boolean aprobada;
+
+    public Boolean getAprobada() {
+        return aprobada;
+    }
+
+    public void setAprobada(Boolean aprobada) {
+        this.aprobada = this.estaAprobada();
+    }
 
     public String getNombre() {
 		return nombre;
@@ -22,7 +31,19 @@ public class Tarea {
 	public Tarea(List<Nota> unasNotas) {
         this.notas = unasNotas;
     }
-    
+
+    public List<Nota> getNotas() {
+        return notas;
+    }
+
+    public void setNotas(List<Nota> notas) {
+        this.notas = notas;
+    }
+
+    public void setUltimaNota(Nota ultimaNota) {
+        this.ultimaNota = ultimaNota;
+    }
+
     Boolean estaAprobada() {
     	return notas.stream().allMatch(nota -> nota.estaAprobada());
     }

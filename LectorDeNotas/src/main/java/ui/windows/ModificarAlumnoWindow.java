@@ -6,13 +6,13 @@ import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.TextBox;
 import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.WindowOwner;
-import ui.viewModel.AlumnoViewModel;
+import ui.viewModel.EstudianteViewModel;
 
 
-public class ModificarAlumnoWindow extends Dialog<AlumnoViewModel> {
+public class ModificarAlumnoWindow extends Dialog<EstudianteViewModel> {
 
     public ModificarAlumnoWindow(WindowOwner owner) {
-        super(owner, new AlumnoViewModel());
+        super(owner, new EstudianteViewModel());
     }
 
     @Override
@@ -20,22 +20,22 @@ public class ModificarAlumnoWindow extends Dialog<AlumnoViewModel> {
         new Label(panel).setText("Nombre");
         TextBox nombre = new TextBox(panel);
         nombre.setWidth(80)
-                .bindEnabledToProperty("nombreAlumno");
+                .bindValueToProperty("estudiante.nombre");
 
         new Label(panel).setText("Apellido");
         TextBox apellido = new TextBox(panel);
         apellido.setWidth(80)
-                .bindValueToProperty("apellidoAlumno");
+                .bindValueToProperty("estudiante.apellido");
 
         new Label(panel).setText("Legajo");
         TextBox legajo = new TextBox(panel);
         legajo.setWidth(80)
-                .bindValueToProperty("legajoAlumno");
+                .bindValueToProperty("estudiante.legajo");
         new Label(panel).setText("Usuario GitHub");
         new TextBox(panel)
                 .setWidth(80)
-                .bindEnabledToProperty("githubAlumno");
-        new Button(panel).setCaption("Aplicar").onClick(() -> this.getModelObject().setTodosCampos());
+                .bindValueToProperty("estudiante.github");
+
         new Button(panel).setCaption("OK").onClick(this::accept);
         new Button(panel).setCaption("Cancelar").onClick(this::cancel).setAsDefault();
 

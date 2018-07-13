@@ -9,7 +9,7 @@ import org.uqbar.commons.utils.Observable;
 
 public class RepoTareas {
 	
-	private List<Tarea> tareas = new LinkedList<>();
+	public List<Tarea> tareas = new LinkedList<>();
 
 	public void agregar(Tarea unaTarea) {
 		this.tareas.add(unaTarea);

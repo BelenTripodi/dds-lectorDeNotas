@@ -1,5 +1,6 @@
 package ui.windows;
 
+import model.Fixture;
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;

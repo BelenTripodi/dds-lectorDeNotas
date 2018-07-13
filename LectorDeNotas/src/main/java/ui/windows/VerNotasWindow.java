@@ -25,20 +25,22 @@ public class VerNotasWindow extends Dialog<ViewModel> {
 
         Table<Tarea> unaTabla = new Table<Tarea>(panel, Tarea.class);
 
-        new Column<>(unaTabla)
+        unaTabla.bindItemsToProperty("tareas");
+
+        new Column<Tarea>(unaTabla)
                 .setTitle("Nombre")
                 .setFixedSize(100)
-                .bindContentsToProperty("tareas");
+                .bindContentsToProperty("nombre");
 
-        new Column<>(unaTabla)
+        new Column<Tarea>(unaTabla)
                 .setTitle("Nota actual")
                 .setFixedSize(100)
                 .bindContentsToProperty("ultimaNota");
 
-        new Column<>(unaTabla)
+        new Column<Tarea>(unaTabla)
                 .setTitle("Aprobado")
                 .setFixedSize(100)
-                .bindContentsToProperty("tareas");
+                .bindContentsToProperty("aprobada");
 
     }
 
