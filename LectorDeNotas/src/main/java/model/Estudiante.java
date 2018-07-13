@@ -1,16 +1,15 @@
 package model;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Estudiante {
 
     private String nombre;
     private String apellido;
     private String legajo;
-    private List<Asignacion> asignaciones;
+    private List<Tarea> asignaciones;
 
-    public Estudiante(String nombre, String apellido, String legajo, List<Asignacion> asignaciones) {
+    public Estudiante(String nombre, String apellido, String legajo, List<Tarea> asignaciones) {
 
         this.nombre = nombre;
         this.apellido = apellido;
@@ -18,11 +17,11 @@ public class Estudiante {
         this.asignaciones = asignaciones;
     }
 
-    public List<Asignacion> getAsignaciones() {
+    public List<Tarea> getAsignaciones() {
         return asignaciones;
     }
 
-    public void setAsignaciones(List<Asignacion> asignaciones) {
+    public void setAsignaciones(List<Tarea> asignaciones) {
         this.asignaciones = asignaciones;
     }
 
@@ -50,16 +49,16 @@ public class Estudiante {
         this.legajo = legajo;
     }
 
-    public Boolean aproboAsignacion(Asignacion asignacion) {
-        return this.noTieneDosMal(asignacion) && this.aproboTodosLosParciales(asignacion);
-    }
+//    public Boolean aproboAsignacion(Asignacion asignacion) {
+//        return this.noTieneDosMal(asignacion) && this.aproboTodosLosParciales(asignacion);
+//    }
 
-    private Boolean noTieneDosMal(Asignacion asignacion) {
-
-        return asignacion.getNotasConceptuales().stream().filter(nota -> nota.equals(NotaConceptual.M)).collect(Collectors.toList()).size() < 2;
-    }
-
-    private boolean aproboTodosLosParciales(Asignacion asignacion) {
-        return asignacion.getNotasNumericas().stream().allMatch(nota -> nota > 6);
-    }
+//    private Boolean noTieneDosMal(Asignacion asignacion) {
+//
+//        return asignacion.getNotasConceptuales().stream().filter(nota -> nota.equals(Nota.M)).collect(Collectors.toList()).size() < 2;
+//    }
+//
+//    private boolean aproboTodosLosParciales(Asignacion asignacion) {
+//        return asignacion.getNotasNumericas().stream().allMatch(nota -> nota > 6);
+//    }
 }

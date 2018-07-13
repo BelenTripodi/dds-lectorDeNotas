@@ -1,18 +1,11 @@
 package ui.windows;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
-import org.uqbar.arena.widgets.Selector;
 import org.uqbar.arena.windows.MainWindow;
-import org.uqbar.lacar.ui.model.Action;
 
-import ui.viewModel.*;
-import ui.windows.ModificarAlumnoWindow;
-import ui.windows.VerNotasWindow;
+import ui.viewModel.ViewModel;
 
 public class MyMainWindow extends MainWindow<ViewModel> {
 
@@ -32,12 +25,12 @@ public class MyMainWindow extends MainWindow<ViewModel> {
 //        selectorMenu.
 
 
-        Action modificarAlumno = new Action() {
-            @Override
-            public void execute() {
-                //ir a ventana para modificar el alumno
-            }
-        };
+//        Action modificarAlumno = new Action() {
+//            @Override
+//            public void execute() {
+//                //ir a ventana para modificar el alumno
+//            }
+//        };
 
         new Button(mainPanel)
                 .setCaption("Modificar datos")
