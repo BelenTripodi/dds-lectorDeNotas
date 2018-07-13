@@ -14,7 +14,7 @@ public class ViewModel {
     private List<Tarea> tareas;
     
 	public ViewModel() {
-        tareas = Repos.repo.todasLasTareas();
+        tareas = Repos.repoTareas.todasLasTareas();
     }
 
     public List<Tarea> getTareas() {

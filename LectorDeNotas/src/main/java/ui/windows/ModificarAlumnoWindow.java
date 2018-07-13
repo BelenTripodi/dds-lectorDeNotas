@@ -1,11 +1,14 @@
 package ui.windows;
 
+import org.uqbar.arena.layout.ColumnLayout;
+import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.TextBox;
 import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.WindowOwner;
+
 import ui.viewModel.EstudianteViewModel;
 
 
@@ -17,28 +20,33 @@ public class ModificarAlumnoWindow extends Dialog<EstudianteViewModel> {
 
     @Override
     protected void createFormPanel(Panel panel) {
-        new Label(panel).setText("Nombre");
-        TextBox nombre = new TextBox(panel);
-        nombre.setWidth(80).bindValueToProperty("estudiante.nombre");
+    	Panel form = new Panel(panel);
+    	form.setLayout(new ColumnLayout(2));
+    	
+    	
+    	
+    	
+        new Label(form).setText("Nombre");
+        TextBox nombre = new TextBox(form);
+        nombre.setWidth(80).bindValueToProperty("nombre");
 
-        new Label(panel).setText("Apellido");
-        TextBox apellido = new TextBox(panel);
+        new Label(form).setText("Apellido");
+        TextBox apellido = new TextBox(form);
         apellido.setWidth(80)
-                .bindValueToProperty("estudiante.apellido");
+                .bindValueToProperty("apellido");
 
-        new Label(panel).setText("Legajo");
-        TextBox legajo = new TextBox(panel);
+        new Label(form).setText("Legajo");
+        TextBox legajo = new TextBox(form);
         legajo.setWidth(80)
-                .bindValueToProperty("estudiante.legajo");
-        new Label(panel).setText("Usuario GitHub");
-        new TextBox(panel)
+                .bindValueToProperty("legajo");
+        new Label(form).setText("Usuario GitHub");
+        new TextBox(form)
                 .setWidth(80)
-                .bindValueToProperty("estudiante.github");
+                .bindValueToProperty("github");
 
-        new Button(panel).setCaption("OK").onClick(this::accept);
-        new Button(panel).setCaption("Cancelar").onClick(this::cancel).setAsDefault();
+        new Button(form).setCaption("OK").onClick(this::accept);
+        new Button(form).setCaption("Cancelar").onClick(this::cancel).setAsDefault();
 
     }
-
 
 }
