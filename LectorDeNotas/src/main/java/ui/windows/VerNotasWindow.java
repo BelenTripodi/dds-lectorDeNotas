@@ -1,6 +1,5 @@
 package ui.windows;
 
-import model.Tarea;
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Panel;
@@ -8,6 +7,8 @@ import org.uqbar.arena.widgets.tables.Column;
 import org.uqbar.arena.widgets.tables.Table;
 import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.WindowOwner;
+
+import model.Tarea;
 import ui.viewModel.ViewModel;
 
 
@@ -25,20 +26,23 @@ public class VerNotasWindow extends Dialog<ViewModel> {
 
         Table<Tarea> unaTabla = new Table<Tarea>(panel, Tarea.class);
 
+        
+        
+        unaTabla.bindItemsToProperty("tareas");
         new Column<>(unaTabla)
                 .setTitle("Nombre")
-                .setFixedSize(100)
-                .bindContentsToProperty("tareas");
-
-        new Column<>(unaTabla)
-                .setTitle("Nota actual")
-                .setFixedSize(100)
-                .bindContentsToProperty("ultimaNota");
+                .setFixedSize(160)
+                .bindContentsToProperty("nombre");
 
         new Column<>(unaTabla)
                 .setTitle("Aprobado")
                 .setFixedSize(100)
-                .bindContentsToProperty("tareas");
+                .bindContentsToProperty("aprobado");
+
+        new Column<>(unaTabla)
+                .setTitle("Ultima nota")
+                .setFixedSize(100)
+                .bindContentsToProperty("ultimaNota");
 
     }
 
@@ -48,24 +52,4 @@ public class VerNotasWindow extends Dialog<ViewModel> {
         new Button(actions).setCaption("Aceptar").onClick(this::accept).setAsDefault();
 
     }
-
-    @Override
-    protected void executeTask() {
-        super.executeTask();
-    }
-
-
 }
-
-
-/*Table<Customer> table = new Table<Celular>(mainPanel, Customer.class);
-table.bindItemsToProperty("results");
-table.bindValueToProperty("selectedCustomer");
-
-new Column<Celular>(table) //
-    .setTitle("Name")
-    .setFixedSize(250)
-    .bindContentsToProperty("fullName");
-
-
- * */

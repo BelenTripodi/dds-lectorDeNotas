@@ -61,17 +61,4 @@ public class Estudiante {
     public static void setLegajo(String legajo) {
         Estudiante.legajo = legajo;
     }
-
-//    public Boolean aproboAsignacion(Asignacion asignacion) {
-//        return this.noTieneDosMal(asignacion) && this.aproboTodosLosParciales(asignacion);
-//    }
-
-//    private Boolean noTieneDosMal(Asignacion asignacion) {
-//
-//        return asignacion.getNotasConceptuales().stream().filter(nota -> nota.equals(Nota.M)).collect(Collectors.toList()).size() < 2;
-//    }
-//
-//    private boolean aproboTodosLosParciales(Asignacion asignacion) {
-//        return asignacion.getNotasNumericas().stream().allMatch(nota -> nota > 6);
-//    }
 }

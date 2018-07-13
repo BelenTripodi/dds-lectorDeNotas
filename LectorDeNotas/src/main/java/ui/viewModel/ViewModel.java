@@ -1,20 +1,19 @@
 package ui.viewModel;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.uqbar.commons.utils.Observable;
 
 import model.Repos;
 import model.Tarea;
-import org.uqbar.commons.utils.Observable;
-
-import java.util.List;
-
 
 @Observable
 public class ViewModel {
 
     private List<Tarea> tareas;
-
-
-    public ViewModel() {
+    
+	public ViewModel() {
         tareas = Repos.repo.todasLasTareas();
     }
 
@@ -25,6 +24,16 @@ public class ViewModel {
     public void setTareas(List<Tarea> tareas) {
         this.tareas = tareas;
     }
-
-
+    
+	public List<String> getNombre() {
+    	return tareas.stream().map(tarea -> tarea.getNombre()).collect(Collectors.toList());
+    }
+	
+	public List<Boolean> getAprobado() {
+		return tareas.stream().map(tarea -> tarea.getAprobado()).collect(Collectors.toList());
+	}
+	
+    public List <String> getUltimaNota() {
+		return tareas.stream().map(tarea -> tarea.getUltimaNota()).collect(Collectors.toList());
+	}
 }
