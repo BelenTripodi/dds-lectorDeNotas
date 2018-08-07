@@ -20,7 +20,7 @@ public class VerNotasWindow extends Dialog<ViewModel> {
     @Override
     protected void createFormPanel(Panel panel) {
 
-        this.setTitle("Ver notas");
+        this.setTitle("CIGA - Ver notas");
         panel.setLayout(new VerticalLayout());
 
         Table<Tarea> unaTabla = new Table<Tarea>(panel, Tarea.class);
@@ -47,7 +47,6 @@ public class VerNotasWindow extends Dialog<ViewModel> {
 
     @Override
     protected void addActions(Panel actions) {
-        new Button(actions).setCaption("Aceptar").onClick(this::accept).setAsDefault();
-
+    	//new Button(actions).setCaption("Aceptar").onClick(this::accept).setAsDefault();
     }
 }

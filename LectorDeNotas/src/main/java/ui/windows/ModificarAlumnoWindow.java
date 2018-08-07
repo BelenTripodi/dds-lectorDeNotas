@@ -19,31 +19,32 @@ public class ModificarAlumnoWindow extends TransactionalDialog<EstudianteViewMod
 
     @Override
     protected void createFormPanel(Panel panel) {
-    	this.setTitle("Modificar Datos");
+    	this.setTitle("CIGA - Modificar datos");
     	Panel form = new Panel(panel);
     	form.setLayout(new ColumnLayout(2));
     	
         new Label(form).setText("Nombre");
         TextBox nombre = new TextBox(form);
-        nombre.setWidth(80).bindValueToProperty("nombre");
+        nombre.setWidth(130).bindValueToProperty("nombre");
 
         new Label(form).setText("Apellido");
         TextBox apellido = new TextBox(form);
-        apellido.setWidth(80)
+        apellido.setWidth(130)
                 .bindValueToProperty("apellido");
 
         new Label(form).setText("Legajo");
-        TextBox legajo = new TextBox(form);
+        Label legajo = new Label(form);
         legajo.setWidth(80)
                 .bindValueToProperty("legajo");
         new Label(form).setText("Usuario GitHub");
         new TextBox(form)
-                .setWidth(80)
+                .setWidth(130)
                 .bindValueToProperty("github");
 
-        new Button(form).setCaption("Aceptar").onClick(this::accept).setAsDefault();
-        new Button(form).setCaption("Cancelar").onClick(this::cancel);
-
+        Button btnAceptar = new Button(form).setCaption("Aceptar").onClick(this::accept).setAsDefault();
+        btnAceptar.setWidth(150);
+        Button btnCancelar = new Button(form).setCaption("Cancelar").onClick(this::cancel);
+        btnCancelar.setWidth(150);
     }
 
 }

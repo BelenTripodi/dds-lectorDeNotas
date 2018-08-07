@@ -19,15 +19,16 @@ public class MyMainWindow extends SimpleWindow<NadaViewModel> {
     @Override
     protected void addActions(Panel panelActions) {
         panelActions.setLayout(new VerticalLayout());
-        this.setTitle("CIGA");
-        new Label(panelActions).setText("Ingrese la opcion deseada");
+        Label lblInicial = new Label(panelActions).setText("Seleccione la opción deseada");
+        lblInicial.setWidth(300);
+        lblInicial.setFontSize(10);
+        new Button(panelActions)
+        		.setCaption("Ver notas")
+        		.onClick(this::verNotas);
+        
         new Button(panelActions)
                 .setCaption("Modificar datos")
                 .onClick(this::modificarDatos);
-
-        new Button(panelActions)
-                .setCaption("Ver notas")
-                .onClick(this::verNotas);
     }
 
     public void verNotas() {
@@ -47,7 +48,6 @@ public class MyMainWindow extends SimpleWindow<NadaViewModel> {
 
     protected void createFormPanel(Panel formPanel) {
         this.setTitle("CIGA");
-
     }
 
 }
