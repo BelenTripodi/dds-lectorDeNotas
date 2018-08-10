@@ -13,13 +13,14 @@ import org.uqbar.arena.windows.SimpleWindow;
 import org.uqbar.arena.windows.WindowOwner;
 
 import ui.viewModel.EstudianteViewModel;
+import ui.viewModel.LoginViewModel;
 import ui.viewModel.NadaViewModel;
 
 
-public class LoginWindow extends TransactionalDialog<EstudianteViewModel> {
+public class LoginWindow extends TransactionalDialog<LoginViewModel> {
 
     public LoginWindow(WindowOwner owner) {
-        super(owner, new EstudianteViewModel());
+        super(owner, new LoginViewModel());
     }
 
     @Override
