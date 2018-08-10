@@ -27,13 +27,9 @@ public class AlgunosDatos {
 		Tarea unaTarea = new Tarea(listaNotasAprobadas, "Primer Parcial");
 		Tarea otraTarea = new Tarea(listaNotasDesaprobadas, "Segundo Parcial");
 		
-		
-		Estudiante estudiante = new Estudiante("Nombre", "Apellido", 0, "unGithub");
-		
 
 		Repos.repoTareas.agregar(unaTarea);
 		Repos.repoTareas.agregar(otraTarea);
-		Repos.repoUsuarios.agregar(estudiante);
 		
 	}
 }

@@ -14,10 +14,10 @@ public class Estudiante {
     private String github;
     private List<Tarea> tareas;
 
-    public Estudiante(String nombre, String apellido, Integer unLegajo, String github) {
+    public Estudiante(String nombre, String apellido, String github) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.legajo = unLegajo;
+        //this.legajo = unLegajo;
         this.github = github;
     }
 

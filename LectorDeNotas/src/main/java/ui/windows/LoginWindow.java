@@ -33,18 +33,17 @@ public class LoginWindow extends TransactionalDialog<LoginViewModel> {
         Label lblBienvenida = new Label(form).setText("Inicio de sesión");
         lblBienvenida.setWidth(300);
         lblBienvenida.setFontSize(10);
-        new Label(login).setText("Número de legajo:");
-        NumericField nroLegajo = new NumericField(login);
+        new Label(form).setText("Número de legajo:");
+        NumericField nroLegajo = new NumericField(form);
                 nroLegajo.setWidth(125);
                 nroLegajo.bindValueToProperty("legajo");
 
-        Button btnIngresar = new Button(panel).setCaption("Ingresar").onClick(this::accept);
+        Button btnIngresar = new Button(form).setCaption("Ingresar").onClick(this::accept).setAsDefault();
         btnIngresar.setWidth(150);
         btnIngresar.onClick(this::verMain);
     }
 
     public void verMain() {
-    	this.close();
         MyMainWindow main = new MyMainWindow(this);
         main.open();
     }
