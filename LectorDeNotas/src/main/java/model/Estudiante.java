@@ -10,11 +10,11 @@ public class Estudiante {
 
     private String nombre;
     private String apellido;
-    private String legajo;
+    private Integer legajo;
     private String github;
     private List<Tarea> tareas;
 
-    public Estudiante(String nombre, String apellido, String legajo, String github) {
+    public Estudiante(String nombre, String apellido, Integer legajo, String github) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
@@ -37,11 +37,11 @@ public class Estudiante {
         this.apellido = apellido;
     }
 
-    public String getLegajo() {
+    public Integer getLegajo() {
         return legajo;
     }
 
-    public void setLegajo(String legajo) {
+    public void setLegajo(Integer legajo) {
         this.legajo = legajo;
     }
 

@@ -26,7 +26,7 @@ public class EstudianteViewModel {
         return estudiante.getApellido();
     }
     
-    public String getLegajo() {
+    public Integer getLegajo() {
         return estudiante.getLegajo();
     }
     
@@ -37,19 +37,19 @@ public class EstudianteViewModel {
     
 
     public void setNombre(String unNombre) {
-        estudiante.setNombre(unNombre);
+        if(!unNombre.isEmpty()) estudiante.setNombre(unNombre);
     }
     
     public void setApellido(String unApellido) {
-        estudiante.setApellido( unApellido);
+    	if(!unApellido.isEmpty()) estudiante.setApellido( unApellido);
     }
     
-    public void  setLegajo(String unLegajo) {
+    public void  setLegajo(Integer unLegajo) {
         estudiante.setLegajo(unLegajo);
     }
     
-    public void  setGithub(String unLegajo) {
-        estudiante.setGithub(unLegajo);
+    public void  setGithub(String unGit) {
+    	if(!unGit.isEmpty()) estudiante.setGithub(unGit);
     }
     
 }

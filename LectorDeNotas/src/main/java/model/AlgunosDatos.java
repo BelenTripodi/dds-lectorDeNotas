@@ -28,7 +28,7 @@ public class AlgunosDatos {
 		Tarea otraTarea = new Tarea(listaNotasDesaprobadas, "Segundo Parcial");
 		
 		
-		Estudiante estudiante = new Estudiante("Nombre", "Apellido", "159.010-2", "unGithub");
+		Estudiante estudiante = new Estudiante("Nombre", "Apellido", 0, "unGithub");
 		
 
 		Repos.repoTareas.agregar(unaTarea);
