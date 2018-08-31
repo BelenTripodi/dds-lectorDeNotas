@@ -13,7 +13,7 @@ public class NotaConceptual extends Nota {
 
 	@Override
 	public Boolean estaAprobada() {
-		return notaReal != "M";
+		return !(notaReal.equals(NotasConceptuales.M));
 	}
 
 	@Override

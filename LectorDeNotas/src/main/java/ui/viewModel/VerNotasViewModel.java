@@ -9,11 +9,11 @@ import model.Repos;
 import model.Tarea;
 
 @Observable
-public class ViewModel {
+public class VerNotasViewModel {
 
     private List<Tarea> tareas;
     
-	public ViewModel() {
+	public VerNotasViewModel() {
         tareas = Repos.repoTareas.todasLasTareas();
     }
 

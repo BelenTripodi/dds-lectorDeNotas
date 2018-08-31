@@ -2,19 +2,18 @@ package ui.windows;
 
 import model.Tarea;
 import org.uqbar.arena.layout.VerticalLayout;
-import org.uqbar.arena.widgets.Button;
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.tables.Column;
 import org.uqbar.arena.widgets.tables.Table;
 import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.WindowOwner;
-import ui.viewModel.ViewModel;
+import ui.viewModel.VerNotasViewModel;
 
 
-public class VerNotasWindow extends Dialog<ViewModel> {
+public class VerNotasWindow extends Dialog<VerNotasViewModel> {
 
     public VerNotasWindow(WindowOwner owner) {
-        super(owner, new ViewModel());
+        super(owner, new VerNotasViewModel());
     }
 
     @Override

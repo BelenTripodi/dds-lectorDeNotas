@@ -54,13 +54,6 @@ public class Estudiante {
         this.github = github;
     }
 
-    public List<Tarea> getTareas() {
-        return tareas;
-    }
-
-    public void setTareas(List<Tarea> tareas) {
-        this.tareas = tareas;
-    }
 }
 
 
