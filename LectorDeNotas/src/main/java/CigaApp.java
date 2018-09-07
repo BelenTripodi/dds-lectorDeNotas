@@ -4,13 +4,13 @@ import org.uqbar.arena.windows.Window;
 import model.AlgunosDatos;
 import model.Estudiante;
 import model.Repos;
-import ui.windows.LoginWindow;
+import ui.windows.MyMainWindow;
 
 public class CigaApp extends Application {
 
 	public static void main(String[] args) {
 		AlgunosDatos.initialize();
-    	Estudiante estudiante = new Estudiante("Nombre", "Apellido", "unGithub");
+    	Estudiante estudiante = new Estudiante("Nombre", "Apellido",123456, "unGithub");
     	Repos.repoUsuarios.agregar(estudiante);
 		new CigaApp().start();
 	}
@@ -18,7 +18,7 @@ public class CigaApp extends Application {
 	@Override
 	protected Window<?> createMainWindow() {
 		//return new MyMainWindow(this);
-		return new LoginWindow(this);
+		return new MyMainWindow(this);
 
 	}
 }
