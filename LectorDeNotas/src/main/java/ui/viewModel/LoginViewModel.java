@@ -13,8 +13,8 @@ public class LoginViewModel {
     private Estudiante estudiante;
 
     public LoginViewModel() {
-    	estudiante = new Estudiante("Nombre", "Apellido", "unGithub");
-    	Repos.repoUsuarios.agregar(estudiante);
+    	estudiante = Repos.repoUsuarios.usuarioActual(); 
+    	
     }
 
     public Integer getLegajo() {
@@ -22,7 +22,7 @@ public class LoginViewModel {
     }
 
     public void setLegajo(Integer unLegajo) {
-        estudiante.setLegajo(unLegajo);
+    	estudiante.setLegajo(unLegajo);
     }
 
 }

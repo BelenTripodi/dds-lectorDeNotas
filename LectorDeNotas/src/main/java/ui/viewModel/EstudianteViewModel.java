@@ -33,7 +33,7 @@ public class EstudianteViewModel {
     }
 
     public Integer getLegajo() {
-        return estudiante.getLegajo();
+        return Repos.repoUsuarios.usuarioActual().getLegajo();
     }
 
     public void setLegajo(Integer unLegajo) {

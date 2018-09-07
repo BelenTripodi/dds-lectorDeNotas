@@ -14,6 +14,7 @@ import ui.viewModel.BasicViewModel;
 public class MyMainWindow extends SimpleWindow<BasicViewModel> {
 //public class MyMainWindow extends SimpleWindow<EstudianteViewModel> {
 
+	
     public MyMainWindow(WindowOwner parent) {
         super(parent, new BasicViewModel());
     }
