@@ -24,7 +24,7 @@ public class VerNotasWindow extends Dialog<VerNotasViewModel> {
 
         Table<Tarea> unaTabla = new Table<Tarea>(panel, Tarea.class);
         
-        unaTabla.bindItemsToProperty("tareas");
+        unaTabla.bindItemsToProperty("asignaciones");
         new Column<>(unaTabla)
                 .setTitle("Nombre")
                 .setFixedSize(160)
@@ -43,9 +43,4 @@ public class VerNotasWindow extends Dialog<VerNotasViewModel> {
 
     }
 
-
-    @Override
-    protected void addActions(Panel actions) {
-    	//new Button(actions).setCaption("Aceptar").onClick(this::accept).setAsDefault();
-    }
 }

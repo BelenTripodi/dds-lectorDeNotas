@@ -13,14 +13,14 @@ public class Estudiante {
     private String apellido;
     private Integer legajo;
     private String github;
-    private List<Tarea> tareas;
+    private List<Asignacion> asignaciones;
 
-    public List<Tarea> getTareas() {
-		return tareas;
+    public List<Asignacion> getAsignaciones() {
+		return asignaciones;
 	}
 
-	public void setTareas(List<Tarea> tareas) {
-		this.tareas = tareas;
+	public void setAsignaciones(List<Asignacion> asignaciones) {
+		this.asignaciones = asignaciones;
 	}
 
 	public Estudiante(String nombre, String apellido, Integer unLegajo, String github) {
@@ -28,7 +28,7 @@ public class Estudiante {
         this.apellido = apellido;
         this.legajo = unLegajo;
         this.github = github;
-        tareas = new LinkedList<Tarea>();
+        asignaciones = new LinkedList<>();
     }
 
     public String getNombre() {
@@ -64,9 +64,9 @@ public class Estudiante {
         this.github = github;
     }
     
-    public void agregarTarea(Tarea unaTarea) 
+    public void agregarAsignacion(Asignacion unaAsignacion)
     {
-    	this.tareas.add(unaTarea);
+    	this.asignaciones.add(unaAsignacion);
     }
     
     public Boolean esMiLegajo(Integer unLegajo)

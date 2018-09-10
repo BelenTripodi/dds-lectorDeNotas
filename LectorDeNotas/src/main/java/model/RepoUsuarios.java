@@ -30,8 +30,5 @@ public class RepoUsuarios {
 	{
 		estudianteLoggeado = estudiante;
 	}
-	
-//	public Estudiante encontrarUsuario(Integer legajo)	{
-//		return estudiantes.stream();
-//	}
+
 }

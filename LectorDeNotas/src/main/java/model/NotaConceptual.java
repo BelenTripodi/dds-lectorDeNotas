@@ -5,19 +5,19 @@ import org.uqbar.commons.utils.Observable;
 @Observable
 public class NotaConceptual extends Nota {
 
-	String notaReal;
+	NotasConceptuales notaReal;
 
-	public NotaConceptual(String notaReal) {
+	public NotaConceptual(NotasConceptuales notaReal) {
 		this.notaReal = notaReal;
 	}
 
 	@Override
 	public Boolean estaAprobada() {
-		return !(notaReal.equals("M"));
+		return !notaReal.equals(NotasConceptuales.M);
 	}
 
 	@Override
 	public String getNotaReal() {
-		return notaReal;
+		return notaReal.toString();
 	}
 }

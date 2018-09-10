@@ -5,9 +5,9 @@ import org.junit.Test;
 
 public class NotaConceptualTest {
 
-    private NotaConceptual notaMal = new NotaConceptual("M");
-    private NotaConceptual notaRegular = new NotaConceptual("R");
-    private NotaConceptual notaBien = new NotaConceptual("B");
+    private NotaConceptual notaMal = new NotaConceptual(NotasConceptuales.M);
+    private NotaConceptual notaRegular = new NotaConceptual(NotasConceptuales.R);
+    private NotaConceptual notaBien = new NotaConceptual(NotasConceptuales.B);
 
     @Test
     public void estaNotaEstaAprobada(){
