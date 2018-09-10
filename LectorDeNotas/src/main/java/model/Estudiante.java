@@ -1,5 +1,6 @@
 package model;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import org.uqbar.commons.utils.TransactionalAndObservable;
@@ -14,11 +15,20 @@ public class Estudiante {
     private String github;
     private List<Tarea> tareas;
 
-    public Estudiante(String nombre, String apellido, Integer unLegajo, String github) {
+    public List<Tarea> getTareas() {
+		return tareas;
+	}
+
+	public void setTareas(List<Tarea> tareas) {
+		this.tareas = tareas;
+	}
+
+	public Estudiante(String nombre, String apellido, Integer unLegajo, String github) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = unLegajo;
         this.github = github;
+        tareas = new LinkedList<Tarea>();
     }
 
     public String getNombre() {
@@ -52,6 +62,16 @@ public class Estudiante {
 
     public void setGithub(String github) {
         this.github = github;
+    }
+    
+    public void agregarTarea(Tarea unaTarea) 
+    {
+    	this.tareas.add(unaTarea);
+    }
+    
+    public Boolean esMiLegajo(Integer unLegajo)
+    {
+    	return legajo.equals(unLegajo);
     }
 
 }

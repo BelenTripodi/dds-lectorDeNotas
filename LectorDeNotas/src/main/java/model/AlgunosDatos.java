@@ -24,12 +24,26 @@ public class AlgunosDatos {
 		listaNotasDesaprobadas.add(unaNotaMal);
 		listaNotasDesaprobadas.add(nota3);
 
-		Tarea unaTarea = new Tarea(listaNotasAprobadas, "Primer Parcial");
-		Tarea otraTarea = new Tarea(listaNotasDesaprobadas, "Segundo Parcial");
+		Tarea primerParcialAprobado = new Tarea(listaNotasAprobadas, "Primer Parcial");
+		Tarea primerParcialDesaprobado = new Tarea(listaNotasDesaprobadas, "Primer Parcial");
 		
-
-		Repos.repoTareas.agregar(unaTarea);
-		Repos.repoTareas.agregar(otraTarea);
+		Tarea segundoParcialAprobado = new Tarea(listaNotasAprobadas, "Segundo Parcial");
+		Tarea segundoParcialDesaprobado = new Tarea(listaNotasDesaprobadas, "Segundo Parcial");
+		
+		Estudiante estudianteAprobador = new Estudiante("Juan", "Aprobador", 123, "elaprobador");
+		Estudiante estudianteDesaprobador = new Estudiante("Pedro", "Desaprobador", 456, "eldesaprobador");
+		
+		estudianteAprobador.agregarTarea(primerParcialAprobado);
+		estudianteAprobador.agregarTarea(segundoParcialAprobado);
+		
+		estudianteDesaprobador.agregarTarea(primerParcialDesaprobado);
+		estudianteDesaprobador.agregarTarea(segundoParcialDesaprobado);
+		
+		Repos.repoUsuarios.agregar(estudianteAprobador);
+		Repos.repoUsuarios.agregar(estudianteDesaprobador);
+		
+//		Repos.repoTareas.agregar(unaTareaAprobada);
+//		Repos.repoTareas.agregar(unaTareaDesaprobada);
 		
 	}
 }

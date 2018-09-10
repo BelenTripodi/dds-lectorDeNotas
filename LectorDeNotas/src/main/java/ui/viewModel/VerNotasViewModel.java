@@ -5,35 +5,36 @@ import java.util.stream.Collectors;
 
 import org.uqbar.commons.utils.Observable;
 
+import model.Estudiante;
 import model.Repos;
 import model.Tarea;
 
 @Observable
 public class VerNotasViewModel {
 
-    private List<Tarea> tareas;
+    private Estudiante estudiante;
     
 	public VerNotasViewModel() {
-        tareas = Repos.repoTareas.todasLasTareas();
+        estudiante = Repos.repoUsuarios.usuarioActual();
     }
 
     public List<Tarea> getTareas() {
-        return tareas;
+        return this.estudiante.getTareas();
     }
 
     public void setTareas(List<Tarea> tareas) {
-        this.tareas = tareas;
+        this.estudiante.setTareas(tareas);
     }
     
 	public List<String> getNombre() {
-    	return tareas.stream().map(tarea -> tarea.getNombre()).collect(Collectors.toList());
+    	return estudiante.getTareas().stream().map(tarea -> tarea.getNombre()).collect(Collectors.toList());
     }
 	
 	public List<Boolean> getAprobado() {
-		return tareas.stream().map(tarea -> tarea.getAprobado()).collect(Collectors.toList());
+		return estudiante.getTareas().stream().map(tarea -> tarea.getAprobado()).collect(Collectors.toList());
 	}
 	
     public List <String> getUltimaNota() {
-		return tareas.stream().map(tarea -> tarea.getUltimaNota()).collect(Collectors.toList());
+		return estudiante.getTareas().stream().map(tarea -> tarea.getUltimaNota()).collect(Collectors.toList());
 	}
 }
