@@ -1,5 +1,6 @@
 package ui.windows;
 
+import model.Asignacion;
 import model.Tarea;
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Panel;
@@ -22,7 +23,7 @@ public class VerNotasWindow extends Dialog<VerNotasViewModel> {
         this.setTitle("CIGA - Ver notas");
         panel.setLayout(new VerticalLayout());
 
-        Table<Tarea> unaTabla = new Table<Tarea>(panel, Tarea.class);
+        Table<Asignacion> unaTabla = new Table<Asignacion>(panel, Asignacion.class);
         
         unaTabla.bindItemsToProperty("asignaciones");
         new Column<>(unaTabla)
@@ -33,7 +34,7 @@ public class VerNotasWindow extends Dialog<VerNotasViewModel> {
         new Column<>(unaTabla)
                 .setTitle("Aprobado")
                 .setFixedSize(100)
-                .bindContentsToProperty("aprobado").setTransformer(new Transformador());;
+                .bindContentsToProperty("aprobado").setTransformer(new Transformador());
 
 
         new Column<>(unaTabla)

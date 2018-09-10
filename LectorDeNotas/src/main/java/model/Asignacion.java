@@ -1,16 +1,15 @@
 package model;
 
+import org.uqbar.commons.utils.Observable;
+
 import java.util.List;
 
+@Observable
 public class Asignacion {
 
     private List<Nota> notas;
     private String nombre;
     private Tarea tarea;
-
-    public Tarea getTareas() {
-        return tarea;
-    }
 
     public void setTarea(Tarea tarea) {
         this.tarea = tarea;

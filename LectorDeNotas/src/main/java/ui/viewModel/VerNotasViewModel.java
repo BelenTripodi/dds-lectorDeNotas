@@ -21,7 +21,7 @@ public class VerNotasViewModel {
         return this.estudiante.getAsignaciones();
     }
 
-    public void setTareas(List<Asignacion> asignaciones) {
+    public void setAsignaciones(List<Asignacion> asignaciones) {
         this.estudiante.setAsignaciones(asignaciones);
     }
 
