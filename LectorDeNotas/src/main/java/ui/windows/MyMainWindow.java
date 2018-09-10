@@ -7,14 +7,11 @@ import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.SimpleWindow;
 import org.uqbar.arena.windows.WindowOwner;
-
 import ui.viewModel.BasicViewModel;
 
 
 public class MyMainWindow extends SimpleWindow<BasicViewModel> {
-//public class MyMainWindow extends SimpleWindow<EstudianteViewModel> {
 
-	
     public MyMainWindow(WindowOwner parent) {
         super(parent, new BasicViewModel());
     }
@@ -26,9 +23,9 @@ public class MyMainWindow extends SimpleWindow<BasicViewModel> {
         lblInicial.setWidth(300);
         lblInicial.setFontSize(10);
         new Button(panelActions)
-        		.setCaption("Ver notas")
-        		.onClick(this::verNotas);
-        
+                .setCaption("Ver notas")
+                .onClick(this::verNotas);
+
         new Button(panelActions)
                 .setCaption("Modificar datos")
                 .onClick(this::modificarDatos);

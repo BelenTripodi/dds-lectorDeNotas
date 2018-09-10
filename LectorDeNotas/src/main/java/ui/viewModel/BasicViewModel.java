@@ -1,9 +1,9 @@
 package ui.viewModel;
 
 public class BasicViewModel {
-	
-	public BasicViewModel() {
-		super();
-	}
+
+    public BasicViewModel() {
+        super();
+    }
 
 }

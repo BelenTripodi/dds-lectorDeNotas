@@ -4,9 +4,9 @@ import org.uqbar.commons.utils.Transactional;
 
 @Transactional
 public class LegajoInvalidoViewModel {
-	
-	public LegajoInvalidoViewModel(){
-		
-	}
+
+    public LegajoInvalidoViewModel() {
+
+    }
 
 }

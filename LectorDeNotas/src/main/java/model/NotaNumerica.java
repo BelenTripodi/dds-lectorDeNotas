@@ -5,19 +5,19 @@ import org.uqbar.commons.utils.Observable;
 @Observable
 public class NotaNumerica extends Nota {
 
-	Integer notaReal;
+    Integer notaReal;
 
-	public NotaNumerica(Integer notaReal) {
-		this.notaReal = notaReal;
-	}
+    public NotaNumerica(Integer notaReal) {
+        this.notaReal = notaReal;
+    }
 
-	@Override
-	public Boolean estaAprobada() {
-		return notaReal > 6;
-	}
-	
-	@Override
-	public String getNotaReal() {
-		return notaReal.toString();
-	}
+    @Override
+    public Boolean estaAprobada() {
+        return notaReal > 6;
+    }
+
+    @Override
+    public String getNotaReal() {
+        return notaReal.toString();
+    }
 }

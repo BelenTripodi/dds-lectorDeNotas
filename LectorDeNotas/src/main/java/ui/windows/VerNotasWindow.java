@@ -1,7 +1,6 @@
 package ui.windows;
 
 import model.Asignacion;
-import model.Tarea;
 import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.tables.Column;
@@ -24,7 +23,7 @@ public class VerNotasWindow extends Dialog<VerNotasViewModel> {
         panel.setLayout(new VerticalLayout());
 
         Table<Asignacion> unaTabla = new Table<Asignacion>(panel, Asignacion.class);
-        
+
         unaTabla.bindItemsToProperty("asignaciones");
         new Column<>(unaTabla)
                 .setTitle("Nombre")

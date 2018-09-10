@@ -11,18 +11,22 @@ public class Asignacion {
     private String nombre;
     private Tarea tarea;
 
-    public void setTarea(Tarea tarea) {
-        this.tarea = tarea;
-    }
-
     public Asignacion(Tarea unaTarea, List<Nota> notas, String nombre) {
         this.tarea = unaTarea;
         this.notas = notas;
         this.nombre = nombre;
     }
 
+    public void setTarea(Tarea tarea) {
+        this.tarea = tarea;
+    }
+
     public String getNombre() {
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public List<Nota> getNotas() {
@@ -31,10 +35,6 @@ public class Asignacion {
 
     public void setNotas(List<Nota> notas) {
         this.notas = notas;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public Boolean getAprobado() {

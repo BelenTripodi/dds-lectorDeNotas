@@ -5,6 +5,7 @@ import org.uqbar.commons.utils.Observable;
 @Observable
 public abstract class Nota {
 
-	abstract Boolean estaAprobada();
-	abstract String getNotaReal();
+    abstract Boolean estaAprobada();
+
+    abstract String getNotaReal();
 }

@@ -1,9 +1,9 @@
 package model;
 
+import org.uqbar.commons.utils.TransactionalAndObservable;
+
 import java.util.LinkedList;
 import java.util.List;
-
-import org.uqbar.commons.utils.TransactionalAndObservable;
 
 
 @TransactionalAndObservable

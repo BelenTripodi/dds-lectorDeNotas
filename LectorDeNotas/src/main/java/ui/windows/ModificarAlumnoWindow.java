@@ -7,7 +7,6 @@ import org.uqbar.arena.widgets.Label;
 import org.uqbar.arena.widgets.Panel;
 import org.uqbar.arena.widgets.TextBox;
 import org.uqbar.arena.windows.WindowOwner;
-
 import ui.viewModel.EstudianteViewModel;
 
 
@@ -19,10 +18,10 @@ public class ModificarAlumnoWindow extends TransactionalDialog<EstudianteViewMod
 
     @Override
     protected void createFormPanel(Panel panel) {
-    	this.setTitle("CIGA - Modificar datos");
-    	Panel form = new Panel(panel);
-    	form.setLayout(new ColumnLayout(2));
-    	
+        this.setTitle("CIGA - Modificar datos");
+        Panel form = new Panel(panel);
+        form.setLayout(new ColumnLayout(2));
+
         new Label(form).setText("Nombre");
         TextBox nombre = new TextBox(form);
         nombre.setWidth(130).bindValueToProperty("nombre");
