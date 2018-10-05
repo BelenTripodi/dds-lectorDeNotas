@@ -1,5 +1,6 @@
 package model;
 
+import model.dto.EstudianteDTO;
 import org.uqbar.commons.utils.TransactionalAndObservable;
 
 import java.util.LinkedList;
@@ -74,6 +75,9 @@ public class Estudiante {
     	return legajo.equals(unLegajo);
     }
 
+    public EstudianteDTO toDto(){
+        return new EstudianteDTO(this.legajo, this.nombre, this.apellido, this.github);
+    }
 }
 
 

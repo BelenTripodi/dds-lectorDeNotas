@@ -11,9 +11,10 @@ import org.uqbar.commons.utils.Transactional;
 public class EstudianteViewModel {
 
     private Estudiante estudiante;
+    private NotitasService notitasService = NotitasService.getInstance();
 
     public EstudianteViewModel() {
-        estudiante = NotitasService.getInstance().getStudent();
+        estudiante = notitasService.getStudent();
     }
 
     public String getNombre() {
@@ -22,6 +23,7 @@ public class EstudianteViewModel {
 
     public void setNombre(String unNombre) {
         if (!unNombre.isEmpty()) estudiante.setNombre(unNombre);
+        notitasService.putStudent(estudiante);
     }
 
     public String getApellido() {
@@ -30,6 +32,7 @@ public class EstudianteViewModel {
 
     public void setApellido(String unApellido) {
         if (!unApellido.isEmpty()) estudiante.setApellido(unApellido);
+        notitasService.putStudent(estudiante);
     }
 
     public String getLegajo() {
@@ -38,6 +41,7 @@ public class EstudianteViewModel {
 
     public void setLegajo(String unLegajo) {
         estudiante.setLegajo(unLegajo);
+        notitasService.putStudent(estudiante);
     }
 
     public String getGithub() {
@@ -46,6 +50,7 @@ public class EstudianteViewModel {
 
     public void setGithub(String unGit) {
         if (!unGit.isEmpty()) estudiante.setGithub(unGit);
+        notitasService.putStudent(estudiante);
     }
 
 }

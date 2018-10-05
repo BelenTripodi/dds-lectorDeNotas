@@ -10,6 +10,9 @@ import jsonAObjeto.ParserAsignaciones;
 import jsonAObjeto.ParserEstudiante;
 import model.Asignacion;
 import model.Estudiante;
+import model.dto.EstudianteDTO;
+import org.mortbay.util.ajax.JSON;
+import org.uqbar.commons.model.Entity;
 
 import java.util.List;
 
@@ -51,10 +54,11 @@ public class NotitasService {
 	}
 
 	@PUT
-	public String putStudent(Estudiante estudiante) {
+	public void putStudent(Estudiante estudiante) {
 		WebResource recurso = this.client.resource(URL).path(RESOURCE_STUDENT);
-		WebResource.Builder builder = recurso.header("Authorization", TOKEN).accept(MediaType.TEXT_PLAIN);
-		String response = builder.get(String.class);
-		return response;
-	}
+		WebResource.Builder builder = recurso.header("Authorization", TOKEN).accept(MediaType.APPLICATION_JSON);
+		String json = ParserAsignaciones.toJson(estudiante.toDto());
+        EstudianteDTO response = builder.put(EstudianteDTO.class, json);
+        System.out.println(response);
+    }
 }
