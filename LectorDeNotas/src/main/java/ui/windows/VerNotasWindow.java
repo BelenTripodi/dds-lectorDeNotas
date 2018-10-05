@@ -1,12 +1,12 @@
 package ui.windows;
 
-import org.uqbar.arena.layout.ColumnLayout;
-import org.uqbar.arena.widgets.Label;
+import model.Asignacion;
+import org.uqbar.arena.layout.VerticalLayout;
 import org.uqbar.arena.widgets.Panel;
-import org.uqbar.arena.widgets.TextBox;
+import org.uqbar.arena.widgets.tables.Column;
+import org.uqbar.arena.widgets.tables.Table;
 import org.uqbar.arena.windows.Dialog;
 import org.uqbar.arena.windows.WindowOwner;
-
 import ui.viewModel.VerNotasViewModel;
 
 
@@ -17,49 +17,23 @@ public class VerNotasWindow extends Dialog<VerNotasViewModel> {
     }
 
     @Override
-    protected void createFormPanel(Panel form) {
+    protected void createFormPanel(Panel panel) {
 
-    	Panel panel = new Panel(form);
         this.setTitle("CIGA - Ver notas");
-        panel.setLayout(new ColumnLayout(1)); //Aca era VerticaLayout
+        panel.setLayout(new VerticalLayout());
 
-        
-        
-        new Label(panel).setText("Nombre");
-        TextBox nombre = new TextBox(panel);
-        nombre.setWidth(600).bindValueToProperty("nombre");
+        Table<Asignacion> unaTabla = new Table<Asignacion>(panel, Asignacion.class);
 
-        new Label(panel).setText("Aprobado");
-        TextBox apellido = new TextBox(panel);
-        apellido.setWidth(600)
-                .bindValueToProperty("aprobado");
+        unaTabla.bindItemsToProperty("asignaciones");
+        new Column<>(unaTabla)
+                .setTitle("Nombre")
+                .setFixedSize(160)
+                .bindContentsToProperty("nombre");
 
-        new Label(panel).setText("Ultima nota");
-        TextBox legajo = new TextBox(panel);
-        legajo.setWidth(600)
-                .bindValueToProperty("ultimaNota");
-
-//        Table<Asignacion> unaTabla = new Table<Asignacion>(panel, Asignacion.class);
-
-        
-        
-
-//        unaTabla.bindItemsToProperty("asignaciones");
-//        new Column<>(unaTabla)
-//                .setTitle("Nombre")
-//                .setFixedSize(160)
-//                .bindContentsToProperty("nombre");
-//
-//        new Column<>(unaTabla)
-//                .setTitle("Aprobado")
-//                .setFixedSize(100)
-//                .bindContentsToProperty("aprobado").setTransformer(new Transformador());
-//
-//
-//        new Column<>(unaTabla)
-//                .setTitle("Ultima nota")
-//                .setFixedSize(100)
-//                .bindContentsToProperty("ultimaNota");
+        new Column<>(unaTabla)
+                .setTitle("Aprobado")
+                .setFixedSize(100)
+                .bindContentsToProperty("aprobado").setTransformer(new Transformador());
 
     }
 

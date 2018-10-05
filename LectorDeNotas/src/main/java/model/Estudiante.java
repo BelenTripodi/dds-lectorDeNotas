@@ -11,7 +11,7 @@ public class Estudiante {
 
     private String nombre;
     private String apellido;
-    private Integer legajo;
+    private String legajo;
     private String github;
     private List<Asignacion> asignaciones;
 
@@ -23,7 +23,7 @@ public class Estudiante {
 		this.asignaciones = asignaciones;
 	}
 
-	public Estudiante(String nombre, String apellido, Integer unLegajo, String github) {
+	public Estudiante(String nombre, String apellido, String unLegajo, String github) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = unLegajo;
@@ -47,11 +47,11 @@ public class Estudiante {
         this.apellido = apellido;
     }
 
-    public Integer getLegajo() {
+    public String getLegajo() {
         return legajo;
     }
 
-    public void setLegajo(Integer legajo) {
+    public void setLegajo(String legajo) {
         this.legajo = legajo;
     }
 

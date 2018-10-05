@@ -1,28 +1,23 @@
 package ui.viewModel;
 
 
+import httpclient.NotitasService;
 import model.Estudiante;
-
-
 import org.uqbar.commons.utils.Observable;
 import org.uqbar.commons.utils.Transactional;
-
-import httpclient.ServiceGet;
 
 @Transactional
 @Observable
 public class EstudianteViewModel {
 
     private Estudiante estudiante;
-    private String test;
 
     public EstudianteViewModel() {
-        test = ServiceGet.getInstance().get("student").toString();
+        estudiante = NotitasService.getInstance().getStudent();
     }
 
     public String getNombre() {
-    	return test;
-//        return estudiante.getNombre();
+        return estudiante.getNombre();
     }
 
     public void setNombre(String unNombre) {
@@ -30,8 +25,7 @@ public class EstudianteViewModel {
     }
 
     public String getApellido() {
-    	return test;
-//        return estudiante.getApellido();
+        return estudiante.getApellido();
     }
 
     public void setApellido(String unApellido) {
@@ -39,17 +33,15 @@ public class EstudianteViewModel {
     }
 
     public String getLegajo() {
-    	return test;
-//        return Repos.repoUsuarios.usuarioActual().getLegajo();
+        return estudiante.getLegajo();
     }
 
-    public void setLegajo(Integer unLegajo) {
+    public void setLegajo(String unLegajo) {
         estudiante.setLegajo(unLegajo);
     }
 
     public String getGithub() {
-    	return test;
-//        return estudiante.getGithub();
+        return estudiante.getGithub();
     }
 
     public void setGithub(String unGit) {

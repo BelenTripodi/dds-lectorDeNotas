@@ -31,14 +31,14 @@ public class MyMainWindow extends SimpleWindow<BasicViewModel> {
                 .onClick(this::modificarDatos);
     }
 
-    public void verNotas() {
+    private void verNotas() {
         Dialog<?> dialog = new VerNotasWindow(this);
         dialog.open();
         dialog.onAccept(() -> {
         });
     }
 
-    public void modificarDatos() {
+    private void modificarDatos() {
         Dialog<?> dialog = new ModificarAlumnoWindow(this);
         dialog.open();
         dialog.onAccept(() -> {

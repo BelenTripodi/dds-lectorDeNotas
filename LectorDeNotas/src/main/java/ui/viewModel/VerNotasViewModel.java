@@ -1,46 +1,33 @@
 package ui.viewModel;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+import httpclient.NotitasService;
+import model.Asignacion;
 import org.uqbar.commons.utils.Observable;
 
-import httpclient.ServiceGet;
-import model.Asignacion;
-import model.Estudiante;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Observable
 public class VerNotasViewModel {
 
-	private static final String recurso ="student/assignments";
-    private Estudiante estudiante;
-    private String test; // TODO hay que borrar esto, es solo para probar el get
+    private List<Asignacion> asignaciones;
 
     public VerNotasViewModel() {
-        test = ServiceGet.getInstance().get(recurso).toString();
+        asignaciones = NotitasService.getInstance().getStudentsAssignments();
     }
 
-    public String getAsignaciones() { //TODO esto devolvia List<Asignacion>
-    	return test;
-    	//        return this.estudiante.getAsignaciones();
+    public List<Asignacion> getAsignaciones() {
+        return this.asignaciones;
     }
 
-    public void setAsignaciones(List<Asignacion> asignaciones) {
-        this.estudiante.setAsignaciones(asignaciones);
+    public List<String> getNombre() {
+
+        return this.asignaciones.stream().map(Asignacion::getNombre).collect(Collectors.toList());
     }
 
-    public String getNombre() { // TODO esto devolvia List<String>
-    	return test;
-//        return estudiante.getAsignaciones().stream().map(asignacion -> asignacion.getNombre()).collect(Collectors.toList());
+    public List<Boolean> getAprobado() {
+
+        return this.asignaciones.stream().map(Asignacion::getAprobado).collect(Collectors.toList());
     }
 
-    public String getAprobado() {// TODO esto devolvia List<Boolean>
-    	return test;
-//        return estudiante.getAsignaciones().stream().map(asignacion -> asignacion.getAprobado()).collect(Collectors.toList());
-    }
-
-    public String getUltimaNota() {// TODO esto devolvia List<String>
-    	return test;
-//        return estudiante.getAsignaciones().stream().map(asignacion -> asignacion.getUltimaNota()).collect(Collectors.toList());
-    }
 }
