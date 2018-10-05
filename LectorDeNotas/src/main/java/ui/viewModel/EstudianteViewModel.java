@@ -2,22 +2,27 @@ package ui.viewModel;
 
 
 import model.Estudiante;
-import model.Repos;
+
+
 import org.uqbar.commons.utils.Observable;
 import org.uqbar.commons.utils.Transactional;
+
+import httpclient.ServiceGet;
 
 @Transactional
 @Observable
 public class EstudianteViewModel {
 
     private Estudiante estudiante;
+    private String test;
 
     public EstudianteViewModel() {
-        estudiante = Repos.repoUsuarios.usuarioActual();
+        test = ServiceGet.getInstance().get("student").toString();
     }
 
     public String getNombre() {
-        return estudiante.getNombre();
+    	return test;
+//        return estudiante.getNombre();
     }
 
     public void setNombre(String unNombre) {
@@ -25,15 +30,17 @@ public class EstudianteViewModel {
     }
 
     public String getApellido() {
-        return estudiante.getApellido();
+    	return test;
+//        return estudiante.getApellido();
     }
 
     public void setApellido(String unApellido) {
         if (!unApellido.isEmpty()) estudiante.setApellido(unApellido);
     }
 
-    public Integer getLegajo() {
-        return Repos.repoUsuarios.usuarioActual().getLegajo();
+    public String getLegajo() {
+    	return test;
+//        return Repos.repoUsuarios.usuarioActual().getLegajo();
     }
 
     public void setLegajo(Integer unLegajo) {
@@ -41,7 +48,8 @@ public class EstudianteViewModel {
     }
 
     public String getGithub() {
-        return estudiante.getGithub();
+    	return test;
+//        return estudiante.getGithub();
     }
 
     public void setGithub(String unGit) {

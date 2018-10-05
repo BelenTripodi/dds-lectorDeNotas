@@ -25,8 +25,8 @@ public class RepoUsuarios {
         return estudianteLoggeado;
     }
 
-    public void seLogueo(Estudiante estudiante) {
-        estudianteLoggeado = estudiante;
-    }
+//    public void seLogueo(Estudiante estudiante) {
+//        estudianteLoggeado = estudiante;
+//    }
 
 }
