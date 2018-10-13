@@ -11,6 +11,8 @@ import jsonAObjeto.ParserEstudiante;
 import model.Asignacion;
 import model.Estudiante;
 import model.dto.EstudianteDTO;
+import model.dto.StudentDTO;
+
 import org.mortbay.util.ajax.JSON;
 import org.uqbar.commons.model.Entity;
 
@@ -58,7 +60,7 @@ public class NotitasService {
 		WebResource recurso = this.client.resource(URL).path(RESOURCE_STUDENT);
 		WebResource.Builder builder = recurso.header("Authorization", TOKEN).accept(MediaType.APPLICATION_JSON);
 		String json = ParserAsignaciones.toJson(estudiante.toDto());
-        EstudianteDTO response = builder.put(EstudianteDTO.class, json);
+        StudentDTO response = builder.put(StudentDTO.class, json);
         System.out.println(response);
     }
 }
